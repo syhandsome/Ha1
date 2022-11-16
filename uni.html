@@ -27,6 +27,34 @@
 </style>
 
 <body>
+    <script type='text/javascript'>
+    //<![CDATA[
+    // JavaScript Document
+    var message = "ai cho copy ,thả viruss bây h :3 ";
+    function defeatIE() {
+        if (document.all) {
+            (message);
+            return false;
+        }
+    }
+    function defeatNS(e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+            if (e.which == 2 || e.which == 3) {
+                (message);
+                return false;
+            }
+        }
+    }
+    if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = defeatNS;
+    } else {
+        document.onmouseup = defeatNS;
+        document.oncontextmenu = defeatIE;
+    }
+    document.oncontextmenu = new Function("return false")
+        //]]>
+</script>
     <audio controls autoplay>
   <source src="MONO - Em Là (Album 22 - Track No.03).mp3" type="audio/mpeg">
 </audio>
