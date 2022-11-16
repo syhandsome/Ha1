@@ -55,6 +55,23 @@
     document.oncontextmenu = new Function("return false")
         //]]>
 </script>
+    <script type='text/javascript'>
+    checkCtrl = false $('*').keydown(function(e) {
+        if (e.keyCode == '17') {
+            checkCtrl = false
+        }
+    }).keyup(function(ev) {
+        if (ev.keyCode == '17') {
+            checkCtrl = false
+        }
+    }).keydown(function(event) {
+        if (checkCtrl) {
+            if (event.keyCode == '85') {
+                return false;
+            }
+        }
+    })
+</script>
     <audio controls autoplay>
   <source src="MONO - Em Là (Album 22 - Track No.03).mp3" type="audio/mpeg">
 </audio>
